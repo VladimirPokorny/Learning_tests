@@ -15,7 +15,8 @@ def test_make_first_big():
     assert make_first_big('hello') == 'Hello'
     assert make_first_big('') == ''
     assert make_first_big('x') == 'X'
-    assert make_first_big('XyZ') == 'XYz'
+    assert make_first_big('XyZ') == 'Xyz'
+    assert make_first_big('XyZ') != 'XYz'
 
 
 if __name__ == "__main__":
