@@ -1,6 +1,7 @@
 import numpy as np
 from main import pythagoras
 
+
 def test_pythagoras():
     # Test a few cases
     assert np.isclose(pythagoras(3, 4), 5)
