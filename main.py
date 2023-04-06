@@ -6,6 +6,10 @@ def pythagoras(a: float, b: float) -> float:
     return c
 
 
+def vytvor_seznam_zvirat() -> list:
+    return ['pes', 'kočka', 'králík', 'had']
+
+
 def make_first_big(string: str) -> str:
     if len(string) == 0:
         output = ''
