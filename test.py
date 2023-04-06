@@ -20,4 +20,6 @@ def test_make_first_big():
 
 if __name__ == "__main__":
     test_pythagoras()
+    test_make_first_big()
+
     print("Everything passed")
