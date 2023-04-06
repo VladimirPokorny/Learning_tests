@@ -1,4 +1,4 @@
-from main import pythagoras, make_first_big, crop_first_last, make_first_big
+from main import pythagoras, make_first_big, crop_first_last
 import numpy as np
 
 
