@@ -6,5 +6,10 @@ def pythagoras(a: float, b: float) -> float:
     return c
 
 
-def test():
-    return
+def make_first_big(string: str) -> str:
+    if len(string) == 0:
+        output = ''
+    else:
+        output = string[0].upper() + string[1:]
+
+    return output
