@@ -1,4 +1,4 @@
-from main import pythagoras, make_first_big
+from main import pythagoras, make_first_big, crop_first_last
 import numpy as np
 
 
@@ -37,6 +37,21 @@ def test_make_first_big():
     assert make_first_big('x') == 'X'
     assert make_first_big('XyZ') == 'XyZ'
     assert make_first_big('XyZ') != 'XYZ'
+
+
+def crop_first_last_test():
+    test_values = [
+        ('', ''),
+        ('Ahoj', 'ho'),
+        ('Tohle je dlouhá věta', 'ohle je dlouhá vět'),
+        ('éíáýžřčšě+', 'íáýžřčšě'),
+        ('...','.'),
+        ('a', ''),
+        ('fr','')
+    ]
+
+    for input_str, output_str in test_values:
+        assert crop_first_last(input_str) == output_str
 
 
 if __name__ == "__main__":
