@@ -39,7 +39,7 @@ def test_make_first_big():
     assert make_first_big('XyZ') != 'XYZ'
 
 
-def crop_first_last_test():
+def test_crop_first_last():
     test_values = [
         ('', ''),
         ('Ahoj', 'ho'),
