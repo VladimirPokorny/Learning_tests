@@ -1,4 +1,4 @@
-from main import pythagoras
+from main import pythagoras, make_first_big
 
 
 def test_pythagoras():
@@ -9,6 +9,13 @@ def test_pythagoras():
     result = pythagoras(a, b)
 
     assert result == expected_result
+
+
+def test_make_first_big():
+    assert make_first_big('hello') == 'Hello'
+    assert make_first_big('') == ''
+    assert make_first_big('x') == 'X'
+    assert make_first_big('XyZ') == 'XYz'
 
 
 if __name__ == "__main__":
