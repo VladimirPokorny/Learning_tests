@@ -1,4 +1,4 @@
-from main import pythagoras, make_first_big, crop_first_last
+from main import pythagoras, make_first_big, crop_first_last, make_first_big
 import numpy as np
 
 
@@ -54,9 +54,24 @@ def test_crop_first_last():
         assert crop_first_last(input_str) == output_str
 
 
+def test_make_first_big():
+    test_values = [
+        ('test', 'Test'),
+        ('čeněk', 'Čeněk'),
+        ('24. prosince', '24. prosince'),
+        ('', ''),
+        ('1', '1'),
+        ('@', '@')
+    ]
+
+    for input_str, output_str in test_values:
+        assert make_first_big(input_str) == output_str
+
+
 if __name__ == "__main__":
     test_pythagoras()
     test_make_first_big()
     test_crop_first_last()
+    test_make_first_big()
 
     print("Everything passed")
