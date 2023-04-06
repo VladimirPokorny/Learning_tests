@@ -45,9 +45,9 @@ def crop_first_last_test():
         ('Ahoj', 'ho'),
         ('Tohle je dlouhá věta', 'ohle je dlouhá vět'),
         ('éíáýžřčšě+', 'íáýžřčšě'),
-        ('...','.'),
+        ('...', '.'),
         ('a', ''),
-        ('fr','')
+        ('fr', '')
     ]
 
     for input_str, output_str in test_values:
@@ -57,5 +57,6 @@ def crop_first_last_test():
 if __name__ == "__main__":
     test_pythagoras()
     test_make_first_big()
+    test_crop_first_last()
 
     print("Everything passed")
