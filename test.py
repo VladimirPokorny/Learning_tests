@@ -31,14 +31,6 @@ def test_pythagoras():
         assert pythagoras(a, b) == c
 
 
-def test_make_first_big():
-    assert make_first_big('hello') == 'Hello'
-    assert make_first_big('') == ''
-    assert make_first_big('x') == 'X'
-    assert make_first_big('XyZ') == 'XyZ'
-    assert make_first_big('XyZ') != 'XYZ'
-
-
 def test_crop_first_last():
     test_values = [
         ('', ''),

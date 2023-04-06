@@ -10,15 +10,6 @@ def vytvor_seznam_zvirat() -> list:
     return ['pes', 'kočka', 'králík', 'had']
 
 
-def make_first_big(string: str) -> str:
-    if len(string) == 0:
-        output = ''
-    else:
-        output = string[0].upper() + string[1:]
-
-    return output
-
-
 def crop_first_last(input_str: str) -> str:
     """Method which crop first and last letter from a given string.
 
