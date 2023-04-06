@@ -31,14 +31,6 @@ def test_pythagoras():
         assert pythagoras(a, b) == c
 
 
-def test_make_first_big():
-    assert make_first_big('hello') == 'Hello'
-    assert make_first_big('') == ''
-    assert make_first_big('x') == 'X'
-    assert make_first_big('XyZ') == 'XyZ'
-    assert make_first_big('XyZ') != 'XYZ'
-
-
 def test_crop_first_last():
     test_values = [
         ('', ''),
@@ -54,9 +46,24 @@ def test_crop_first_last():
         assert crop_first_last(input_str) == output_str
 
 
+def test_make_first_big():
+    test_values = [
+        ('test', 'Test'),
+        ('čeněk', 'Čeněk'),
+        ('24. prosince', '24. prosince'),
+        ('', ''),
+        ('1', '1'),
+        ('@', '@')
+    ]
+
+    for input_str, output_str in test_values:
+        assert make_first_big(input_str) == output_str
+
+
 if __name__ == "__main__":
     test_pythagoras()
     test_make_first_big()
     test_crop_first_last()
+    test_make_first_big()
 
     print("Everything passed")
